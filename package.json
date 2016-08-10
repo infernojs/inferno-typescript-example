@@ -1,0 +1,28 @@
+{
+  "name": "inferno-typescript-example",
+  "version": "1.0.0",
+  "description": "A basic example of Inferno with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "inferno",
+    "typescript"
+  ],
+  "author": "Dominic Gannaway",
+  "license": "MIT",
+  "dependencies": {
+    "inferno": "^0.7.26",
+    "inferno-component": "^0.7.26",
+    "inferno-create-element": "^0.7.26",
+    "inferno-dom": "^0.7.26"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.1"
+  }
+}
