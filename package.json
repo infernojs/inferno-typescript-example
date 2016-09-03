@@ -4,7 +4,9 @@
   "description": "A basic example of Inferno with TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dev-server --inline"
   },
   "keywords": [
     "inferno",
@@ -19,7 +21,8 @@
     "inferno-dom": "^0.7.26"
   },
   "devDependencies": {
-    "http-server": "^0.9.0",
+    "clean-webpack-plugin": "^0.1.10",
+    "html-webpack-plugin": "^2.22.0",
     "source-map-loader": "^0.1.5",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
