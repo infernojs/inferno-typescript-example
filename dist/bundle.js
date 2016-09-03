@@ -51,8 +51,8 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var inferno_dom_1 = __webpack_require__(1);
-	var inferno_component_1 = __webpack_require__(3);
-	var inferno_create_element_1 = __webpack_require__(5);
+	var Component = __webpack_require__(3);
+	var elem = __webpack_require__(5);
 	var container = document.getElementById('app');
 	var MyComponent = (function (_super) {
 	    __extends(MyComponent, _super);
@@ -60,11 +60,11 @@
 	        _super.apply(this, arguments);
 	    }
 	    MyComponent.prototype.render = function () {
-	        return inferno_create_element_1.default('div', null, 'Hello world!');
+	        return elem('div', null, 'Hello world!');
 	    };
 	    return MyComponent;
-	}(inferno_component_1.default));
-	inferno_dom_1.render(inferno_create_element_1.default(MyComponent), container);
+	}(Component));
+	inferno_dom_1.render(elem(MyComponent), container);
 
 
 /***/ },

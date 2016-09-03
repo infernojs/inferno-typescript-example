@@ -1,5 +1,7 @@
+declare function require(name: string): any;
+
 declare namespace __Inferno {
-	interface ComponentLifecycle {
+	interface IComponentLifecycle {
 		componentWillMount?(): void;
 		componentDidMount?(): void;
 		componentWillReceiveProps?(nextProps: any, nextContext: any): void;
@@ -8,8 +10,12 @@ declare namespace __Inferno {
 		componentDidUpdate?(prevProps: any, prevState: any, prevContext: any): void;
 		componentWillUnmount?(): void;
 	}
-	class Component implements ComponentLifecycle {
-		constructor(props?: any, context?: any);
+
+	interface IProps {
+		children? : Component<any>
+	}
+	class Component<T extends IProps> implements IComponentLifecycle {
+		constructor(props?: T, context?: any);
 	}
 }
 
@@ -22,36 +28,38 @@ declare module 'inferno' {
 	export default Inferno;
 }
 
+declare function createElement(
+	name: string | __Inferno.Component<any>,
+	props?: any,
+	...children: Array<any>
+): any;
+
+declare module createElement {}
+
 declare module 'inferno-create-element' {
-	function createElement(
-		name: string | __Inferno.Component,
-		props?: any,
-		...children: Array<any>
-	): any;
-	export default createElement;
+	export = createElement;
 }
 
 declare module 'inferno-dom' {
-	interface InfernoDOM {
-		render: any,
-		findDOMNode: any,
-		mount: any,
-		patch: any,
-		unmount: any
-	}
-	export default InfernoDOM;
+	export function render (element: any, props?: {}, children?: any): any;
 }
 
 declare module 'inferno-router' {
 	interface InfernoRouter {
-		Route: __Inferno.Component
-		Router: __Inferno.Component,
-		Link: __Inferno.Component,
+		Route: __Inferno.Component<any>;
+		Router: __Inferno.Component<any>;
+		Link: __Inferno.Component<any>,
 		browserHistory: any
 	}
 	export default InfernoRouter;
 }
 
+declare class Component<T>  implements __Inferno.IComponentLifecycle {
+	constructor(props: T, context: any);
+}
+
+declare module Component {}
+
 declare module 'inferno-component' {
-	export default __Inferno.Component;
+	export = Component;
 }
