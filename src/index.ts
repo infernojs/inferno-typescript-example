@@ -1,13 +1,14 @@
-import { render } from 'inferno-dom';
-import * as Component from 'inferno-component';
-import * as elem from 'inferno-create-element';
+import * as Inferno from 'inferno';
+
+import Component from 'inferno-component';
+import elem from 'inferno-create-element';
 
 const container = document.getElementById('app');
 
-class MyComponent extends Component<any> {
+class MyComponent extends Component<any, any> {
 	render() {
 		return elem('div', null, 'Hello world!');
 	}
 }
 
-render(elem(MyComponent), container);
+Inferno.render(elem(MyComponent, null, null), container);

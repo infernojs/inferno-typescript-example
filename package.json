@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "webpack-dev-server --inline"
+    "build": "webpack -p",
+    "start": "webpack-dev-server --inline"
   },
   "keywords": [
     "inferno",
@@ -15,10 +15,9 @@
   "author": "Dominic Gannaway",
   "license": "MIT",
   "dependencies": {
-    "inferno": "^0.7.26",
-    "inferno-component": "^0.7.26",
-    "inferno-create-element": "^0.7.26",
-    "inferno-dom": "^0.7.26"
+    "inferno": "^1.0.0",
+    "inferno-component": "^1.0.0",
+    "inferno-create-element": "^1.0.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.10",
@@ -26,6 +25,7 @@
     "source-map-loader": "^0.1.5",
     "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.16.2"
   }
 }

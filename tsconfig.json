@@ -6,7 +6,7 @@
 		"module": "commonjs",
 		"target": "es5"
 	},
-	"files": [
-		"./typings/inferno.d.ts"
+	"include": [
+		"src/**/*"
 	]
 }
