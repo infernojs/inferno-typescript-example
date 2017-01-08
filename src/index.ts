@@ -1,5 +1,4 @@
-import * as Inferno from 'inferno';
-
+import {render} from 'inferno';
 import Component from 'inferno-component';
 import elem from 'inferno-create-element';
 
@@ -11,4 +10,4 @@ class MyComponent extends Component<any, any> {
 	}
 }
 
-Inferno.render(elem(MyComponent, null, null), container);
+render(elem(MyComponent, null, null), container);

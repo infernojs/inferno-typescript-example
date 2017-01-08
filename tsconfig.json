@@ -1,12 +1,27 @@
 {
+	"version": "2.1.4",
 	"compilerOptions": {
 		"outDir": "./dist/",
+		"target": "es5",
+		"module": "es6",
 		"sourceMap": true,
-		"noImplicitAny": true,
-		"module": "commonjs",
-		"target": "es5"
+		"lib": [
+			"es6",
+			"es7",
+			"dom"
+		],
+		"noUnusedLocals": true,
+		"strictNullChecks": false,
+		"removeComments": false,
+		"types": [
+			"inferno"
+		]
 	},
 	"include": [
 		"src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
 	]
 }
