@@ -1,27 +1,28 @@
 {
-	"version": "2.1.4",
+	"version": "2.1.5",
 	"compilerOptions": {
-		"outDir": "./dist/",
-		"target": "es5",
+		"target": "es6",
 		"module": "es6",
+		"allowJs": false,
+		"allowSyntheticDefaultImports": true,
 		"sourceMap": true,
 		"lib": [
 			"es6",
 			"es7",
 			"dom"
 		],
-		"noUnusedLocals": true,
-		"strictNullChecks": false,
-		"removeComments": false,
 		"types": [
 			"inferno"
-		]
+		],
+		"jsx": "preserve",
+		"noUnusedLocals": true,
+		"strictNullChecks": false,
+		"removeComments": false
 	},
 	"include": [
 		"src/**/*"
 	],
 	"exclude": [
-		"node_modules",
-		"dist"
+		"node_modules"
 	]
 }

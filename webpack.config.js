@@ -1,16 +1,36 @@
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: "./src/index.ts",
+	entry: "./src/index.tsx", // Point to main file
 	output: {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
 	},
-
-	// Enable sourcemaps for debugging webpack"s output.
-	devtool: "source-map",
-
+	resolve: {
+		extensions: [ '.js', '.jsx', '.ts', '.tsx' ]
+	},
+	performance: {
+		hints: false
+	},
+	module: {
+		loaders: [
+			{
+				test: /\.tsx?$/, 						  // All ts and tsx files will be process by
+				loaders: [ 'babel-loader', 'ts-loader' ], // first babel-loader, then ts-loader
+				exclude: /node_modules/                   // ignore node_modules
+			}, {
+				test: /\.jsx?$/,                          // all js and jsx files will be processed by
+				loader: 'babel-loader',                   // babel-loader
+				exclude: /node_modules/                  // ignore node_modules
+			}
+		]
+	},
+	devServer: {
+		contentBase: "dist/",
+		historyApiFallback: true
+	},
 	plugins: [
 		new HtmlWebpackPlugin(
 			{
@@ -22,22 +42,12 @@ module.exports = {
 			["dist"], {
 				verbose: true
 			}
-		)
-	],
-	resolve: {
-		extensions: [ '.js', '.jsx', '.ts', '.tsx' ]
-	},
-
-	module: {
-		loaders: [
-			// All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-			{ test: /\.js$/, loader: "source-map-loader" },
-			// All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-			{ test: /\.ts$/, loader: "ts-loader" }
-		]
-	},
-	devServer: {
-		contentBase: "dist/",
-		historyApiFallback: true
-	}
+		),
+		// By default, webpack does `n=>n` compilation with entry files. This concatenates
+		// them into a single chunk.
+		new webpack.optimize.LimitChunkCountPlugin({
+			maxChunks: 1
+		}),
+		new webpack.HotModuleReplacementPlugin()
+	]
 };
