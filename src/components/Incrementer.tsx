@@ -1,18 +1,16 @@
-import {addOne} from '../utils/math';
+import { addOne } from '../utils/math';
 import Component from 'inferno-component';
-import {Visualizer} from './Visualizer';
+import { Visualizer } from './Visualizer';
 /* This is example of Inferno Class Component */
 
 interface Props {
 	name: string;
 }
 
-export class Incrementer extends Component<Props, any> {
-	public state: {value: number};
+export class Incrementer extends Component<Props, { value: number }> {
 
 	constructor(props, context) {
 		super(props, context);
-
 		this.state = {
 			value: 1
 		};
@@ -34,7 +32,7 @@ export class Incrementer extends Component<Props, any> {
 			<div>
 				{this.props.name}
 				<button onClick={this.doMath}>Increment</button>
-				<Visualizer number={this.state.value + 'foobar'}/>
+				<Visualizer number={this.state.value + 'foobar'} />
 			</div>
 		);
 	}
