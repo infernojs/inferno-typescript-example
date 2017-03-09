@@ -1,6 +1,7 @@
 dist
 
 _site
+.alm
 .history
 .git
 build
