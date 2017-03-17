@@ -28,7 +28,7 @@ module.exports = {
 		]
 	},
 	devServer: {
-		contentBase: "dist/",
+		contentBase: "src/",
 		historyApiFallback: true
 	},
 	plugins: [
