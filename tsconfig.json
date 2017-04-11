@@ -1,10 +1,11 @@
 {
-	"version": "2.1.5",
+	"version": "2.2.2",
 	"compilerOptions": {
 		"target": "es6",
 		"module": "es6",
 		"allowJs": false,
 		"allowSyntheticDefaultImports": true,
+		"preserveConstEnums": true,
 		"sourceMap": true,
 		"moduleResolution": "node",
 		"lib": [
@@ -17,7 +18,7 @@
 		],
 		"jsx": "preserve",
 		"noUnusedLocals": true,
-		"strictNullChecks": false,
+		"strictNullChecks": true,
 		"removeComments": false
 	},
 	"include": [

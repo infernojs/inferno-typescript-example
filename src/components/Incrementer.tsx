@@ -1,28 +1,27 @@
-import { addOne } from '../utils/math';
 import Component from 'inferno-component';
+import { addOne } from '../utils/math';
 import { Visualizer } from './Visualizer';
-/* This is example of Inferno Class Component */
 
 interface Props {
 	name: string;
 }
 
 export class Incrementer extends Component<Props, { value: number }> {
+	public state = {
+		value: 1
+	};
 
 	constructor(props, context) {
 		super(props, context);
-		this.state = {
-			value: 1
-		};
 	}
 
-	doMath = () => {
+	public doMath = () => {
 		this.setState({
 			value: addOne(this.state.value)
 		});
 	}
 
-	render() {
+	public render() {
 		// uncomment: example of type verification
 		//
 		// this.props.name = 1;
