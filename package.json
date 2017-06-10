@@ -16,12 +16,12 @@
   "author": "Dominic Gannaway",
   "license": "MIT",
   "dependencies": {
-    "inferno": "^3.0.3",
-    "inferno-component": "^3.0.3"
+    "inferno": "^3.4.3",
+    "inferno-component": "^3.4.3"
   },
   "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
     "babel-plugin-inferno": "^3.2.0",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -30,10 +30,10 @@
     "clean-webpack-plugin": "^0.1.16",
     "html-webpack-plugin": "^2.28.0",
     "source-map-loader": "^0.2.1",
-    "ts-loader": "^2.0.3",
-    "tslint": "^5.1.0",
-    "typescript": "^2.2.2",
-    "webpack": "2.3.3",
-    "webpack-dev-server": "2.4.2"
+    "ts-loader": "^2.1.0",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4",
+    "webpack": "2.6.1",
+    "webpack-dev-server": "2.4.5"
   }
 }
