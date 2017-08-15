@@ -2,8 +2,6 @@
 	"version": "2.2.2",
 	"compilerOptions": {
 		"target": "es6",
-		"module": "es6",
-		"allowJs": false,
 		"allowSyntheticDefaultImports": true,
 		"preserveConstEnums": true,
 		"sourceMap": true,
@@ -18,14 +16,10 @@
 		],
 		"jsx": "preserve",
 		"noUnusedLocals": true,
-		"strictNullChecks": true,
-		"removeComments": false
+		"strictNullChecks": true
 	},
 	"include": [
 		"src/**/*"
-	],
-	"exclude": [
-		"node_modules"
 	],
 	"compileOnSave": false
 }
