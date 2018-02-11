@@ -1,5 +1,4 @@
-import { render, version } from 'inferno';
-import Component from 'inferno-component';
+import { render, version, Component } from 'inferno';
 import { Incrementer } from './components/Incrementer';
 
 const container = document.getElementById('app');
@@ -10,7 +9,7 @@ class MyComponent extends Component<any, any> {
 	constructor(props, context) {
 		super(props, context);
 
-		this.tsxVersion = 2.34; /* This is typed value */
+		this.tsxVersion = 2.71; /* This is typed value */
 	}
 
 	public render() {

@@ -43,11 +43,6 @@ module.exports = {
 				verbose: true
 			}
 		),
-		// By default, webpack does `n=>n` compilation with entry files. This concatenates
-		// them into a single chunk.
-		new webpack.optimize.LimitChunkCountPlugin({
-			maxChunks: 1
-		}),
 		new webpack.HotModuleReplacementPlugin()
 	]
 };
