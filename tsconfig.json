@@ -1,5 +1,5 @@
 {
-	"version": "2.2.2",
+	"version": "2.6.2",
 	"compilerOptions": {
 		"target": "es6",
 		"module": "es6",
@@ -12,9 +12,6 @@
 			"es6",
 			"es7",
 			"dom"
-		],
-		"types": [
-			"inferno"
 		],
 		"jsx": "preserve",
 		"noUnusedLocals": true,

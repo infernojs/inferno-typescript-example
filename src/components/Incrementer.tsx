@@ -31,7 +31,7 @@ export class Incrementer extends Component<Props, { value: number }> {
 			<div>
 				{this.props.name}
 				<button onClick={this.doMath}>Increment</button>
-				<Visualizer number={this.state.value + 'foobar'} />
+				<Visualizer value={this.state.value + 'foobar'} />
 			</div>
 		);
 	}
