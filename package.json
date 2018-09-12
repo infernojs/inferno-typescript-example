@@ -16,7 +16,7 @@
   "author": "Dominic Gannaway",
   "license": "MIT",
   "dependencies": {
-    "inferno": "^4.0.1"
+    "inferno": "^5.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
