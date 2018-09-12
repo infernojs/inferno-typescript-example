@@ -3,27 +3,43 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: "./src/index.tsx", // Point to main file
+	mode: "none", 											// Can be changed to 'development' or 'production' to have separate dev or prod build configs
+	entry: "./src/index.tsx", 								// Point to main file
 	output: {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
 	},
 	resolve: {
-		extensions: [ '.js', '.jsx', '.ts', '.tsx' ]
+		extensions: ['.js', '.jsx', '.ts', '.tsx']
 	},
 	performance: {
 		hints: false
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
-				test: /\.tsx?$/, 						  // All ts and tsx files will be process by
-				loaders: [ 'babel-loader', 'ts-loader' ], // first babel-loader, then ts-loader
-				exclude: /node_modules/                   // ignore node_modules
+				test: /\.scss$/,
+				use: [
+					"style-loader", 						// creates style nodes from JS strings
+					"css-loader", 							// translates CSS into CommonJS
+					"sass-loader" 							// compiles Sass to CSS, using Node Sass by default
+				]
+			},
+			{
+				test: /\.css$/,
+				use: [
+					"style-loader", 						// creates style nodes from JS strings
+					"css-loader"							// translates CSS into CommonJS
+				]
+			},
+			{
+				test: /\.tsx?$/, 						  	// All ts and tsx files will be process by
+				use: ['babel-loader', 'ts-loader'], 		// first babel-loader, then ts-loader
+				exclude: /node_modules/                  	// ignore node_modules
 			}, {
-				test: /\.jsx?$/,                          // all js and jsx files will be processed by
-				loader: 'babel-loader',                   // babel-loader
-				exclude: /node_modules/                  // ignore node_modules
+				test: /\.jsx?$/,                          	// all js and jsx files will be processed by
+				use: 'babel-loader',                  		// babel-loader
+				exclude: /node_modules/                  	// ignore node_modules
 			}
 		]
 	},

@@ -2,6 +2,8 @@ import { Component } from 'inferno';
 import { addOne } from '../utils/math';
 import { Visualizer } from './Visualizer';
 
+import './Incrementer.scss';
+
 interface Props {
 	name: string;
 }
@@ -28,10 +30,10 @@ export class Incrementer extends Component<Props, { value: number }> {
 		// this.props.bar = 1;
 
 		return (
-			<div>
-				{this.props.name}
-				<button onClick={this.doMath}>Increment</button>
-				<Visualizer number={this.state.value + 'foobar'} />
+			<div className="btn-container">
+				<p>{this.props.name}</p>
+				<button className="my-button" onClick={this.doMath}>Increment</button>
+				<Visualizer number={`${this.state.value} foobar`} />
 			</div>
 		);
 	}

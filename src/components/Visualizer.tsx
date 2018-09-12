@@ -1,3 +1,4 @@
+import './Visualizer.css';
 
 /*
  * This is example of Inferno functional component
