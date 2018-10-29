@@ -1,5 +1,4 @@
 {
-	"version": "2.2.2",
 	"compilerOptions": {
 		"target": "es6",
 		"module": "es6",

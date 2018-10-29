@@ -6,6 +6,10 @@ interface Props {
 	name: string;
 }
 
+/*
+ * The first interface defines prop shape
+ * The second interface defines state shape
+ */
 export class Incrementer extends Component<Props, { value: number }> {
 	public state = {
 		value: 1
