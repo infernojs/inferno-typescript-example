@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p",
+		"check": "tsc",
     "lint": "tslint src/*.ts{,x} src/**/*.ts{,x}",
     "start": "webpack-dev-server --inline"
   },
@@ -16,7 +17,7 @@
   "author": "Dominic Gannaway",
   "license": "MIT",
   "dependencies": {
-    "inferno": "^6.1.0"
+    "inferno": "^6"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -24,7 +25,7 @@
     "@babel/preset-env": "7.1.0",
     "@babel/preset-typescript": "^7.1.0",
     "babel-loader": "^8.0.4",
-    "babel-plugin-inferno": "^6.0.2",
+    "babel-plugin-inferno": "^6",
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^3.2.0",
     "source-map-loader": "^0.2.4",

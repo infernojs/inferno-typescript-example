@@ -1,30 +1,27 @@
 {
 	"compilerOptions": {
-		"target": "es6",
-		"module": "es6",
-		"allowJs": false,
+		"pretty": true,
+		"target": "esnext",
+		"module": "esnext",
 		"allowSyntheticDefaultImports": true,
 		"preserveConstEnums": true,
 		"sourceMap": true,
 		"moduleResolution": "node",
-		"lib": [
-			"es6",
-			"es7",
-			"dom"
-		],
+		"lib": ["es2017", "dom"],
 		"types": [
 			"inferno"
 		],
 		"jsx": "preserve",
 		"noUnusedLocals": true,
-		"strictNullChecks": true,
-		"removeComments": false
+		"baseUrl": "./src",
+		"noEmit": true,
+		"skipLibCheck": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
 	},
 	"include": [
-		"src/**/*"
-	],
-	"exclude": [
-		"node_modules"
-	],
-	"compileOnSave": false
+		"src/**/*",
+		"node_modules/inferno/dist/index.d.ts"
+	]
 }

@@ -1,8 +1,8 @@
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+	mode: "none",
 	entry: "./src/index.tsx", // Point to main file
 	output: {
 		path: __dirname + "/dist",
@@ -17,9 +17,9 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx|tsx|ts)$/, 						  // All ts and tsx files will be process by
-				loaders: [ 'babel-loader' ], // first babel-loader, then ts-loader
-				exclude: /node_modules/                   // ignore node_modules
+				test: /\.(js|jsx|tsx|ts)$/,   // All ts and tsx files will be process by
+				loaders: 'babel-loader',			// first babel-loader, then ts-loader
+				exclude: /node_modules/				// ignore node_modules
 			}
 		]
 	},
@@ -38,7 +38,6 @@ module.exports = {
 			["dist"], {
 				verbose: true
 			}
-		),
-		new webpack.HotModuleReplacementPlugin()
+		)
 	]
 };
