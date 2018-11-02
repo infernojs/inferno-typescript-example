@@ -1,10 +1,9 @@
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	mode: "none", 											// Can be changed to 'development' or 'production' to have separate dev or prod build configs
-	entry: "./src/index.tsx", 								// Point to main file
+	mode: "none",
+	entry: "./src/index.tsx", // Point to main file
 	output: {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
@@ -33,13 +32,9 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.tsx?$/, 						  	// All ts and tsx files will be process by
-				use: ['babel-loader', 'ts-loader'], 		// first babel-loader, then ts-loader
-				exclude: /node_modules/                  	// ignore node_modules
-			}, {
-				test: /\.jsx?$/,                          	// all js and jsx files will be processed by
-				use: 'babel-loader',                  		// babel-loader
-				exclude: /node_modules/                  	// ignore node_modules
+				test: /\.(js|jsx|tsx|ts)$/,   // All ts and tsx files will be process by
+				loaders: 'babel-loader',			// first babel-loader, then ts-loader
+				exclude: /node_modules/				// ignore node_modules
 			}
 		]
 	},
@@ -58,7 +53,6 @@ module.exports = {
 			["dist"], {
 				verbose: true
 			}
-		),
-		new webpack.HotModuleReplacementPlugin()
+		)
 	]
 };

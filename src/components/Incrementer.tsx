@@ -8,6 +8,10 @@ interface Props {
 	name: string;
 }
 
+/*
+ * The first interface defines prop shape
+ * The second interface defines state shape
+ */
 export class Incrementer extends Component<Props, { value: number }> {
 	public state = {
 		value: 1
@@ -30,10 +34,10 @@ export class Incrementer extends Component<Props, { value: number }> {
 		// this.props.bar = 1;
 
 		return (
-			<div className="btn-container">
-				<p>{this.props.name}</p>
+			<div>
+				{this.props.name}
 				<button className="my-button" onClick={this.doMath}>Increment</button>
-				<Visualizer number={`${this.state.value} foobar`} />
+				<Visualizer value={this.state.value + 'THIS SHOULD FAIL ( npm run check )!'} />
 			</div>
 		);
 	}
