@@ -1,4 +1,4 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -49,10 +49,8 @@ module.exports = {
 				inject: "body"
 			}
 		),
-		new CleanWebpackPlugin(
-			["dist"], {
-				verbose: true
-			}
-		)
+		new CleanWebpackPlugin({
+			verbose: true
+		})
 	]
 };

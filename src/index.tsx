@@ -1,5 +1,6 @@
 import { Component, render, version } from 'inferno';
 import { Incrementer } from './components/Incrementer';
+import './main.css';
 
 const container = document.getElementById('app');
 
