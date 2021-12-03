@@ -1,4 +1,4 @@
-#Typescript + JSX example (TSX) for Inferno
+# Typescript + JSX example (TSX) for Inferno
 
 ## Overview
 
