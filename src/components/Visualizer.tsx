@@ -6,7 +6,7 @@ import './Visualizer.css';
  */
 
 interface VisualizerProps {
-	value: number;
+	value: string;
 }
 
 export function Visualizer(props: VisualizerProps) {

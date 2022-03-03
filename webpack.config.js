@@ -1,5 +1,6 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const transformInferno = require('ts-transform-inferno').default
 
 module.exports = {
 	mode: "none",
@@ -28,14 +29,27 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					"style-loader", 						// creates style nodes from JS strings
-					"css-loader"							// translates CSS into CommonJS
+					"css-loader"								// translates CSS into CommonJS
 				]
 			},
 			{
-				test: /\.(js|jsx|tsx|ts)$/,   // All ts and tsx files will be process by
+				test: /\.tsx$/,
+				loader: 'ts-loader',
+				options: {
+					getCustomTransformers: () => ({
+						before: [transformInferno()],
+					}),
+				},
+			},
+			{
+				test: /\.ts$/,
+				loader: 'ts-loader',
+			},
+			{
+				test: /\.(js|jsx)$/,   // All ts and tsx files will be process by
 				loaders: 'babel-loader',			// first babel-loader, then ts-loader
 				exclude: /node_modules/				// ignore node_modules
-			}
+			},
 		]
 	},
 	devServer: {
