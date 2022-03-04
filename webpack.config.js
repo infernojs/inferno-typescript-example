@@ -45,11 +45,6 @@ module.exports = {
 				test: /\.ts$/,
 				loader: 'ts-loader',
 			},
-			{
-				test: /\.(js|jsx)$/,   // All ts and tsx files will be process by
-				loaders: 'babel-loader',			// first babel-loader, then ts-loader
-				exclude: /node_modules/				// ignore node_modules
-			},
 		]
 	},
 	devServer: {
