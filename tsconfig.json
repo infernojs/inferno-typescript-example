@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-//		"noEmitOnError": false,
 		"pretty": true,
 		"target": "es6",
 		"module": "esnext",
@@ -15,7 +14,6 @@
 		"jsx": "preserve",
 		"noUnusedLocals": true,
 		"baseUrl": "./src",
-		"noEmit": false,
 		"skipLibCheck": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,

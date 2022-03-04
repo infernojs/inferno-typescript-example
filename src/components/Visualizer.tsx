@@ -6,6 +6,7 @@ import './Visualizer.css';
  */
 
 interface VisualizerProps {
+	// value: number; // Changing type to number will throw type error
 	value: string;
 }
 
