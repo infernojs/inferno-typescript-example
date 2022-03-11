@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"pretty": true,
-		"target": "esnext",
+		"target": "es6",
 		"module": "esnext",
 		"allowSyntheticDefaultImports": true,
 		"preserveConstEnums": true,
@@ -14,7 +14,6 @@
 		"jsx": "preserve",
 		"noUnusedLocals": true,
 		"baseUrl": "./src",
-		"noEmit": true,
 		"skipLibCheck": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
@@ -23,5 +22,9 @@
 	"include": [
 		"src/**/*",
 		"node_modules/inferno/dist/index.d.ts"
-	]
+	],
+	"exclude": [
+		"node_modules"
+	],
+	"compileOnSave": true
 }

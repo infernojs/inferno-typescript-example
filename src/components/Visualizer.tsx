@@ -6,7 +6,8 @@ import './Visualizer.css';
  */
 
 interface VisualizerProps {
-	value: number;
+	// value: number; // Changing type to number will throw type error
+	value: string;
 }
 
 export function Visualizer(props: VisualizerProps) {
