@@ -1,6 +1,6 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const transformInferno = require('ts-transform-inferno').default
+const infernoTsPlugin = require('ts-plugin-inferno').default
 
 module.exports = {
 	mode: "none",
@@ -10,7 +10,7 @@ module.exports = {
 		filename: "bundle.js"
 	},
 	resolve: {
-		extensions: ['.js', '.jsx', '.ts', '.tsx']
+		extensions: ['.ts', '.tsx', '.js', '.jsx']
 	},
 	performance: {
 		hints: false
@@ -37,7 +37,7 @@ module.exports = {
 				loader: 'ts-loader',
 				options: {
 					getCustomTransformers: () => ({
-						before: [transformInferno()],
+						before: [infernoTsPlugin()],
 					}),
 				},
 			},
@@ -48,7 +48,6 @@ module.exports = {
 		]
 	},
 	devServer: {
-		contentBase: "src/",
 		historyApiFallback: true
 	},
 	plugins: [

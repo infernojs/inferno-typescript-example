@@ -2,7 +2,7 @@
 
 ## Overview
 
-Beginner friendly example to get started with Inferno (JSX + typescript) with webpack.
+Example to get started with Inferno (JSX + typescript) with webpack.
 
 ## Getting started
 
