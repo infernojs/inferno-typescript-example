@@ -35,9 +35,8 @@ export class Incrementer extends Component<Props, { value: number }> {
 
 		return (
 			<div>
-				{this.props.name}
-				<button className="my-button" onClick={this.doMath}>Increment</button>
-				<Visualizer value={this.state.value + 'THIS SHOULD FAIL ( npm run check )!'} />
+				<button className="my-button" onClick={this.doMath}>{this.props.name}</button>
+				<Visualizer value={this.state.value + ' THIS SHOULD FAIL ( npm run check )!'} />
 			</div>
 		);
 	}

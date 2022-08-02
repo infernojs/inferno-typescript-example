@@ -1,6 +1,13 @@
 .my-button {
-    background: #750077;
-    color: white;
+    background: #FF3232;
+    color: #fff;
     display: block;
     padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.my-button:hover {
+    opacity: .9;
 }

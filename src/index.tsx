@@ -10,7 +10,7 @@ class MyComponent extends Component<any, any> {
 	constructor(props, context) {
 		super(props, context);
 
-		this.tsxVersion = 3.21; /* This is typed value */
+		this.tsxVersion = 4.74; /* This is typed value */
 	}
 
 	public render() {
