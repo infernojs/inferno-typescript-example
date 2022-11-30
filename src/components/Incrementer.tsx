@@ -36,7 +36,7 @@ export class Incrementer extends Component<Props, { value: number }> {
 		return (
 			<div>
 				<button className="my-button" onClick={this.doMath}>{this.props.name}</button>
-				<Visualizer value={this.state.value + ' THIS SHOULD FAIL ( npm run check )!'} />
+				<Visualizer value={this.state.value + ''} />
 			</div>
 		);
 	}
