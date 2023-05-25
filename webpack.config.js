@@ -1,8 +1,11 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const infernoTsPlugin = require('ts-plugin-inferno').default
+import * as url from 'url';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import {CleanWebpackPlugin} from 'clean-webpack-plugin';
+import infernoTsPlugin from 'ts-plugin-inferno';
 
-module.exports = {
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+export default {
 	mode: "none",
 	entry: "./src/index.tsx", // Point to main file
 	output: {
@@ -37,7 +40,7 @@ module.exports = {
 				loader: 'ts-loader',
 				options: {
 					getCustomTransformers: () => ({
-						before: [infernoTsPlugin()],
+						after: [infernoTsPlugin.default()],
 					}),
 				},
 			},
