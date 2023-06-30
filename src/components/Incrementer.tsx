@@ -4,15 +4,19 @@ import { Visualizer } from './Visualizer';
 
 import './Incrementer.scss';
 
-interface Props {
+interface IncrementerProps {
 	name: string;
+}
+
+interface IncrementerState {
+	value: number;
 }
 
 /*
  * The first interface defines prop shape
  * The second interface defines state shape
  */
-export class Incrementer extends Component<Props, { value: number }> {
+export class Incrementer extends Component<IncrementerProps, IncrementerState> {
 	public state = {
 		value: 1
 	};

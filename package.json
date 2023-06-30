@@ -18,21 +18,21 @@
   "author": "Dominic Gannaway",
   "license": "MIT",
   "dependencies": {
-    "inferno": "^8.1.1"
+    "inferno": "^8.2.2"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.7.4",
-    "html-webpack-plugin": "^5.5.1",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.3.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "ts-loader": "^9.4.3",
+    "ts-loader": "^9.4.4",
     "ts-plugin-inferno": "^6.0.0",
     "tslint": "^6.1.3",
-    "typescript": "^5.0.4",
-    "webpack": "5.84.0",
-    "webpack-cli": "^5.1.1",
-    "webpack-dev-server": "4.15.0"
+    "typescript": "^5.1.6",
+    "webpack": "5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "4.15.1"
   }
 }
