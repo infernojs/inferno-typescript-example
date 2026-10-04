@@ -21,7 +21,7 @@ export class Incrementer extends Component<IncrementerProps, IncrementerState> {
 		value: 1
 	};
 
-	constructor(props, context) {
+	constructor(props: IncrementerProps, context: any) {
 		super(props, context);
 	}
 

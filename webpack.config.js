@@ -5,6 +5,9 @@ import infernoTsPlugin from 'ts-plugin-inferno';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
+// TypeScript 7 has no JavaScript compiler API, ts-loader and ts-plugin-inferno need TypeScript 6
+const tsCompiler = '@typescript/typescript6';
+
 export default {
 	mode: "none",
 	entry: "./src/index.tsx", // Point to main file
@@ -39,6 +42,7 @@ export default {
 				test: /\.tsx$/,
 				loader: 'ts-loader',
 				options: {
+					compiler: tsCompiler,
 					getCustomTransformers: () => ({
 						after: [infernoTsPlugin.default()],
 					}),
@@ -47,6 +51,9 @@ export default {
 			{
 				test: /\.ts$/,
 				loader: 'ts-loader',
+				options: {
+					compiler: tsCompiler
+				},
 			},
 		]
 	},

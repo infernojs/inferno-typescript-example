@@ -16,4 +16,4 @@ Run `npm run check` to validate all types
 
 ## Requirements
 
-NodeJS v6+ is required.
+NodeJS v24+ is required.

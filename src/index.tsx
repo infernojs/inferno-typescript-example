@@ -7,7 +7,7 @@ const container = document.getElementById('app');
 class MyComponent extends Component<any, any> {
 	private readonly tsxVersion: number;
 
-	constructor(props, context) {
+	constructor(props: any, context: any) {
 		super(props, context);
 
 		this.tsxVersion = 5.04; /* This is typed value */
